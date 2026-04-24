@@ -4,7 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ShapeCalculator calculator = new ShapeCalculator();
+        //ShapeCalculator calculator = new ShapeCalculator();
+        Circle cirkel = new Circle(0);
 
         System.out.println("Choose shape: circle / rectangle");
 
@@ -14,8 +15,9 @@ public class Main {
             System.out.println("Enter radius:");
             double radius = scanner.nextDouble();
 
-            double area = calculator.calculateCircleArea(radius);
-            double circumference = calculator.calculateCircleCircumference(radius);
+            double area = cirkel.area();
+
+            double circumference = cirkel.perimeter();
 
             System.out.println("Area: " + area);
             System.out.println("Circumference: " + circumference);
@@ -27,11 +29,11 @@ public class Main {
             System.out.println("Enter height:");
             double height = scanner.nextDouble();
 
-            double area = calculator.calculateRectangleArea(width, height);
-            double perimeter = calculator.calculateRectanglePerimeter(width, height);
+            //double area = calculator.calculateRectangleArea(width, height);
+            //double perimeter = calculator.calculateRectanglePerimeter(width, height);
 
-            System.out.println("Area: " + area);
-            System.out.println("Perimeter: " + perimeter);
+           // System.out.println("Area: " + area);
+            //System.out.println("Perimeter: " + perimeter);
 
         } else {
             System.out.println("Unknown shape");

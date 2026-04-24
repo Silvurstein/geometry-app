@@ -1,12 +1,9 @@
 package Interface;
 
 public interface ShapeInterface {
-    void calculateCircleArea(double radius);
+    double area();
 
-    void calculateCircleCircumference(double radius);
+    double perimeter();
 
-    void calculateRectangleArea(double width, double height);
-
-    void calculateRectanglePerimeter(double width, double height);
 }
 

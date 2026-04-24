@@ -1,10 +1,22 @@
-public class Circle implements Shape {
+import Interface.ShapeInterface;
 
-    public double calculateCircleArea(double radius) {
-        return Math.PI * radius * radius;
-    }
+public class Circle implements ShapeInterface {
 
-    public double calculateCircleCircumference(double radius) {
-        return 2 * Math.PI * radius;
+    private double radius = 0;
+
+    public Circle(double radius) {
+        this.radius = radius;
     }
-}
+        @Override
+        public double area() {
+            return Math.PI * radius * radius;
+        }
+
+        @Override
+        public double perimeter() {
+            return 2 * Math.PI * radius;
+        }
+
+    };
+
+

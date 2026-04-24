@@ -1,13 +1,23 @@
-public class Rectangle implements Shape{
+import Interface.ShapeInterface;
 
-    public double calculateRectangleArea(double width, double height) {
+public class Rectangle implements ShapeInterface {
+
+    private double height;
+    private double width;
+
+    public Rectangle(double height, double width){
+        this.height = height;
+        this.width = width;
+    }
+
+    @Override
+    public double area() {
         return width * height;
     }
 
-    public double calculateRectanglePerimeter(double width, double height) {
+    @Override
+    public double perimeter() {
         return 2 * (width + height);
     }
-
-
 }
 
