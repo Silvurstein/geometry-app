@@ -3,47 +3,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        //ShapeCalculator calculator = new ShapeCalculator();
 
-
-        System.out.println("Choose shape: circle / rectangle");
-
-        String shape = scanner.nextLine();
-
-
-        if (shape.equals("circle")) {
-            System.out.println("Enter radius:");
-            double radius = scanner.nextDouble();
-            Circle cirkel = new Circle(radius);
-
-            double area = cirkel.area();
-
-            double circumference = cirkel.perimeter();
-
-            System.out.println("Area: " + area);
-            System.out.println("Circumference: " + circumference);
-
-        } else if (shape.equals("rectangle")) {
-            System.out.println("Enter width:");
-
-            double width = scanner.nextDouble();
-
-
-            System.out.println("Enter height:");
-            double height = scanner.nextDouble();
-            Rectangle firkant = new Rectangle(width, height);
-
-            double area = firkant.area();
-            double perimeter = firkant.perimeter();
-
-           System.out.println("Area: " + area);
-           System.out.println("Perimeter: " + perimeter);
-
-        } else {
-            System.out.println("Unknown shape");
-        }
-
-        scanner.close();
+        ConsoleUi i = new ConsoleUi();
+        i.start();
     }
 }
